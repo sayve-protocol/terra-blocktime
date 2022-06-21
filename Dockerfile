@@ -6,4 +6,4 @@ COPY . .
 
 
 
-CMD ["python", "send.py"]
+CMD ["python", "calculate.py"]
