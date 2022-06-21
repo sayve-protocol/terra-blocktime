@@ -3,13 +3,15 @@ from terra_sdk.exceptions import LCDResponseError
 import time
 
 
-
+# Get Unix time for snapshot with https://www.epochconverter.com/
 TIME_FUTURE=1656374400
+
+# Unix time
 TIME_NOW=int( time.time() )
-AVERAGE_BLOCK_TIME=6
+AVERAGE_BLOCK_TIME=6.5
 DURATION=float((TIME_FUTURE-TIME_NOW)/AVERAGE_BLOCK_TIME)
 
-# Get time with https://www.epochconverter.com/
+
 NETWORK = 'MAINNET'
 
 
