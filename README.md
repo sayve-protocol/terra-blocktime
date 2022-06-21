@@ -4,7 +4,7 @@ Repo for calculating block time given a time
 Run the docker
 ```
 docker build -t terra_calculate .
-docker run -it  -v $(pwd):/app  terra_send:latest python calculate.py
+docker run -it  -v $(pwd):/app  terra_calculate:latest python calculate.py
 ```
 For details read
 ```
