@@ -43,7 +43,9 @@ terra = LCDClient(chain_id=chain_id, url=public_node_url)
 
 
 # Print block height
+print("Current Block Time")
 print(terra.tendermint.block_info()['block']['header']['height']) 
 
 # Print block at future time
+print("Block time at snapshot")
 print(float(terra.tendermint.block_info()['block']['header']['height']) +DURATION)
