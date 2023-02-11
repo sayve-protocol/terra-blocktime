@@ -3,12 +3,15 @@ from terra_sdk.exceptions import LCDResponseError
 import time
 
 
-# Get Unix time for snapshot with https://www.epochconverter.com/
-TIME_FUTURE=1656374400
+# Get Unix time for snapshot with https://www.epochconverter.com/ or https://www.unixtimestamp.com/
+TIME_FUTURE=1681398000
 
 # Unix time
 TIME_NOW=int( time.time() )
-AVERAGE_BLOCK_TIME=6.5
+print("time now")
+print(TIME_NOW)
+# Get average block time https://terra-scanner.vercel.app/
+AVERAGE_BLOCK_TIME=6.03
 DURATION=float((TIME_FUTURE-TIME_NOW)/AVERAGE_BLOCK_TIME)
 
 
@@ -16,14 +19,14 @@ NETWORK = 'MAINNET'
 
 
 if NETWORK == 'MAINNET':
-    chain_id = 'columbus-5'
-    public_node_url = 'https://lcd.terra.dev'
+    chain_id = 'phoenix-1'
+    public_node_url = 'https://phoenix-lcd.terra.dev'
     tx_look_up = f'https://finder.terra.money/{chain_id}/tx/'
 
 
 else:
-    chain_id = 'bombay-12'
-    public_node_url = 'https://bombay-lcd.terra.dev'
+    chain_id = 'pisco-1'
+    public_node_url = 'https://pisco-lcd.terra.dev'
     tx_look_up = f'https://finder.terra.money/{chain_id}/tx/'
 
 
